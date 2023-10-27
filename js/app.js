@@ -50,9 +50,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+// let totalAdd = a + b + c;
+// let totalMultiply = a * b * c;
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let totalAdd = a + b + c;
-  let totalMultiply = a * b * c;
+  let totalAdd = sum(sum(sum(a, b)[0], c)[0], 0)[0];
+  let totalMultiply = multiply(multiply(a, b)[0], c)[0];
   return[totalAdd,totalMultiply , `${a} and ${b} and ${c} sum to ${totalAdd}.`, `The product of ${a} and ${b} and ${c} is ${totalMultiply}.`];
 }
 
@@ -72,7 +75,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [1, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
